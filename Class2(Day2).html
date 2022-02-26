@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2</title>
+    <style>
+        /* SPACE="_" IS DECENDANT AND > IS FOR CHILDREN */
+        /* UNIVERSAL SELECTOR */
+        *{
+            
+            text-align: center;
+            /* background-color: black; */
+            
+        }
+        /* ID SELECTOR */
+        #idselector{
+            background-color: gray;
+        }
+        /* CLASS SELECTOR */
+        .classSelector1{
+            background-color:lightslategray;
+        }
+        .classSelector2{
+            font-weight: bolder;
+            font-size:xx-large;
+        }
+        /* GROUPING OF MULTIPLE CLASSES */
+        .yo,.oy{
+            background-color: cadetblue;
+
+        }
+        /* SELECT ELEMENT WITH MULTIPLE CLASSES */
+        .yo.no{
+            color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="yo no">Heading 1</h1>
+    <p class="oy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid vero suscipit nam facilis quaerat temporibus tempore voluptatibus molestiae odio officia!</p>
+    <br>
+    <!-- TWO CLASS ON THE SAME TAG -->
+    <div class="classSelector1 classSelector2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sapiente reiciendis eum saepe deserunt voluptate aut quam enim laborum, dolore expedita qui iusto minus adipisci ipsum velit dolores doloremque tempore animi. Similique, suscipit quos?</p>
+    </div>
+    <br>
+<br>
+    <br>
+    <div id="idselector">
+        <h1>Github</h1>
+        <a href="github.com/vanshaj810">My github profile</a>
+    </div>
+    <br><br><br>
+    <div class="classSelector">
+        <h3>This is just for timepass</h3>
+    </div>
+</body>
+</html>
