@@ -33,11 +33,9 @@ for (let index = 2; index * index <= num; index++) {
     flag = 0;
     break;
   }
-  
 }
 if (flag === 1) {
-    console.log(true);
-    }
-else{
-    console.log(false);
+  console.log(true);
+} else {
+  console.log(false);
 }

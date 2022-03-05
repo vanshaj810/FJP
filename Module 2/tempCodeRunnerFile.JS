@@ -1,4 +1,3 @@
-for (let index = 1; index <=5; index++) {
-//     console.log(index);
-    
-// }
+(function(num1,num2){
+//     console.log(num/num2);
+// })(10,2);
