@@ -8,7 +8,7 @@ function cb(error, response, body) {
       console.error("error:", error); // Print the error if one occurred
     } else {
       const dom = new JSDOM(body);
-      console.log("body:", body); // Print the HTML for the Google homepage.
+      // console.log("body:", body); // Print the HTML for the Google homepage.
       const document= dom.window.document;
       let teamsName = document.querySelectorAll(".match-info.match-info-MATCH.match-info-MATCH-half-width .teams .name");
         console.log(teamsName[0].textContent);
