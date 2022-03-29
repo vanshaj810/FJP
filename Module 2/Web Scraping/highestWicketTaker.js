@@ -35,7 +35,7 @@ function cb(error, response, body) {
             }
 
         }
-        console.log("Name of the hightest wicket taker -----> ",Name_Of_Highest_Wicket_Taker);
-        console.log("Max Wicket taken -----> ",maxwic);
+        console.log("Name of the hightest wicket taker -----> ", Name_Of_Highest_Wicket_Taker);
+        console.log("Max Wicket taken -----> ", maxwic);
     }
 }
