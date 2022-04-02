@@ -1,7 +1,10 @@
 const request = require("request");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const fs = require('fs');
+
 const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/match-results";
+let counter = 0;
 request(link, cb);
 let leaderboard = [];
 function cb(error, response, body) {
@@ -15,7 +18,7 @@ function cb(error, response, body) {
             let link = scorecardlink[i].href;
             let completelink = "https://www.espncricinfo.com" + link;
             request(completelink, cb2);
-
+            counter++;
         }
     }
 }
@@ -35,15 +38,23 @@ function cb2(error, response, body) {
                 let four = cells[5].textContent;
                 let six = cells[6].textContent;
                 // console.log("Name : ", name, "\t", "Runs : ", runs, "\t", "Balls : ", ball, "\t", "Fours : ", four, "\t", "Sixes : ", six);
+                processPlayer(name, runs, ball, four, six);
             }
 
         }
+        counter--;
+        if (counter == 0) {
+            console.log(leaderboard);
+            let data= JSON.stringify(leaderboard);
+            fs.writeFileSync('BatsmanStats.json',data);
+        }
     }
+
 }
-processPlayer('Rohit', '15', '4', '2', '4');
-processPlayer('Virat', '50', '20', '4', '3')
-processPlayer('Rohit', '40', '20', '1', '2');
-console.log(leaderboard);
+// processPlayer('Rohit', '15', '4', '2', '4');
+// processPlayer('Virat', '50', '20', '4', '3')
+// processPlayer('Rohit', '40', '20', '1', '2');
+// console.log(leaderboard);
 function processPlayer(name, runs, balls, fours, sixes) {
     runs = Number(runs);
     balls = Number(balls);
@@ -54,6 +65,7 @@ function processPlayer(name, runs, balls, fours, sixes) {
         if (playerObj.Name == name) {
             //will do some work here
             playerObj.Runs += runs;
+            playerObj.Innings+=1;
             playerObj.Balls += balls;
             playerObj.Fours += fours;
             playerObj.Sixes += sixes;
@@ -63,6 +75,7 @@ function processPlayer(name, runs, balls, fours, sixes) {
     // code coming here means we did not find our player inside leaderboard
     let obj = {
         Name: name,
+        Innings:1,
         Runs: runs,
         Balls: balls,
         Fours: fours,
