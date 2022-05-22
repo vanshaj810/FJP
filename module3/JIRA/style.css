@@ -1,15 +1,17 @@
-* {
+
+*{
     box-sizing: border-box;
+    font-family: cursive;
 }
 
-body {
+body{
     margin: 0px;
     padding: 0px;
     /* background-color: #E0DDAA; */
     background: url(https://wallpaper.dog/large/10892376.jpg);
 }
 
-.toolbox-cont {
+.toolbox-cont{
     height: 5rem;
     background-color: #141E27;
     display: flex;
@@ -19,7 +21,7 @@ body {
     top:0px
 }
 
-.toolbox-priority-cont {
+.toolbox-priority-cont{
     height: 3rem;
     background-color: #EEEDDE;
     width: 18rem;
@@ -30,7 +32,7 @@ body {
     border-radius: 2px;
 }
 
-.action-btn-cont {
+.action-btn-cont{
     background-color: #EEEDDE;
     height: 3rem;
     width: 10rem;
@@ -41,56 +43,51 @@ body {
     border-radius: 2px;
 }
 
-.color {
+.color{
     height: 1.5rem;
     width: 3rem;
 }
 
-.lightpink {
-    background-color: lightpink;
+.lightpink{
+    background-color:lightpink;
 }
 
-.blue {
-    background-color: lightblue
+.blue{
+    background-color:lightblue
 }
 
-.green {
-    background-color: lightgreen;
+.green{
+    background-color:lightgreen;
+}
+.black{
+    background-color:black
 }
 
-.black {
-    background-color: black
-}
-
-.add-btn {
+.add-btn{
     font-size: 1.5rem;
 }
 
-.remove-btn {
+.remove-btn{
     font-size: 1.5rem;
 }
-
-
 ::placeholder {
     color: white;
     opacity: 1;
   }
 
-.modal-cont {
+.modal-cont{
     position: absolute;
     left: 25vw;
-    top: 25vh;
+    top:25vh;
     /* background-color: #EEEDDE; */
     background: url(https://media.gettyimages.com/videos/abstract-light-gray-backgroundsloop-video-id1216004370?s=640x640);
     height: 50vh;
     width: 50vw;
     display: none;
-    
 }
 
-.textarea-cont {
-    outline: none;
-    color: antiquewhite;
+.textarea-cont{
+    outline:none;
     resize: none;
     border: none;
     background: url(https://www.wallpaperup.com/uploads/wallpapers/2014/01/16/229225/f992520d8d8cba12dadb9d4c856ce2ae.jpg);
@@ -99,57 +96,69 @@ body {
     width: 75%;
     font-size: 2rem;
     padding: 2rem;
-    border: 1px solid gray;
+    border-right: 2px solid #141E27;
+    color: white;
+
 }
 
-.priority-color-cont {
+.priority-color-cont{
     height: 100%;
     width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid rgba(249, 249, 249, 0.535);
 }
 
-.priority-color {
+.priority-color{
     height: 3rem;
     width: 5rem;
 }
 
-.active {
-    border: 5px solid whitesmoke;
+.active{
+    border: 5px solid #E0DDAA;
 }
 
-.main-cont {
-    margin-top: 2rem;
+.main-cont{
+    margin-top: 7rem;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2rem; 
+    margin-bottom: 2rem;
 }
 
-.ticket-cont {
-    /* background-color: #EEEDDE; */
-    background: url(https://media.istockphoto.com/photos/concrete-wall-white-and-gray-color-for-background-old-grunge-textures-picture-id1360289911?b=1&k=20&m=1360289911&s=170667a&w=0&h=Bmj7th5nSSJXodHWnzrvUdIj_waDk76eNvBhR-DyUWg=);
+.ticket-cont{
+    background-color: #EEEDDE;
     height: 10rem;
     width: 16rem;
 }
 
-.ticket-color {
+.ticket-color{
     height: 1rem;
 }
 
-.ticket-id {
+.ticket-id{
     height: 1.5rem;
-    /* background-color: #EEEDDE; */
-    background: url(https://wallpaperaccess.com/full/1483382.jpg);
-    color: white;
+    background-color: #EEEDDE;
+    font-weight: 600;
+    font-size: .9rem;
+    color: #141E27;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
 }
 
-.task-area {
-    height: calc(100%-1rem-1.5rem);
-    padding: 5px;
+.task-area{
+    height: 5rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     font-size: 1.25rem;
-    color: whitesmoke;
+    overflow: auto;
+    outline: none;
+    word-break: break-all;
+}
+
+.lock-unlock{
+    font-size: 1.5rem;
+    margin-left: 14.5rem;
 }
