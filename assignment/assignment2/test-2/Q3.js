@@ -3,17 +3,18 @@
 // f(x, y)
 // f(x)(y)
 
-
-
-// Solution:
-
-function f(y, x) {
-  if (arguments.length == 1) {
-    return function (x) {
-      return y * x;
-    };
-  } else {
-    return x * y;
-  }
+//solution
+function f(x,y){
+    if(y == undefined){
+       return function(y){
+           return y*x;
+       } 
+    }else{
+        return y*x;
+    }
 }
+
+console.log(f(5,4));
+console.log(f(5)(4));
+
 

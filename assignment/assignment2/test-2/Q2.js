@@ -9,34 +9,26 @@ let obj = {
   length: 5,
 };
 
-function f() {
+function f(obj) {
+  let nObj = {};
   for (let i = 1; i < obj.length; i++) {
-    obj[i] = obj[i] + 1;
+    nObj[i] = obj[i] + 1;
   }
-  delete obj["length"];
-  for (let x in obj) {
-    console.log(`at index ${x} we have value ${obj[x]}`);
-  }
+  nObj["5"] = 4;
+  return nObj;
 }
 
-f();
+// f(obj);
 
 // Solution:
 
-// function f(obj) {
-//   let nObj = JSON.parse(JSON.stringify(obj));
-//   for (let i = 1; i < nObj.length; i++) {
-//     nObj[i] = nObj[i] + 1;
-//   }
-//   delete nObj["length"];
-//   return nObj;
-// }
 
-// function g(obj, callback) {
-//   obj = callback(obj);
-//   for (let x in obj) {
-//     console.log(`at index ${x} we have value ${obj[x]}`);
-//   }
-// }
+function g(obj,cb){
+  let nObj = cb(obj);
+  for (let x in nObj) {
+    console.log(`at index ${x} we have value ${nObj[x]}`);
+  }
+}
 
-// g(obj, f);
+
+g(obj,f);

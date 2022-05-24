@@ -4,7 +4,7 @@ let count = 0;
 let interval = setInterval(function () {
   console.log(count);
   count++;
-}, 100);
+}, 1000);
 
 setTimeout(function () {
   clearInterval(interval);
@@ -13,7 +13,7 @@ setTimeout(function () {
     count--;
     if (count < 0) clearInterval(interval);
   });
-}, 500);
+}, 5000);
 
 // options:
 
@@ -26,5 +26,5 @@ setTimeout(function () {
 // 4) 0 1 2 3 4 3 2 1 0
 
 
-// Solution:
-// 4
+//solution 
+//4)
